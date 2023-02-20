@@ -1,9 +1,16 @@
 import { Router } from 'express';
 
+import authMiddleware from './app/middlewares/auth';
+import UserController from './app/controllers/UserController';
+import SessionController from './app/controllers/SessionController';
+
 const routes = new Router();
 
-routes.get('/teste', (req, res) => {
-  return res.json({ ok: true });
-});
+routes.post('/sessions', SessionController.store);
+routes.post('/users', UserController.store);
+
+//Need auth
+routes.use(authMiddleware);
+routes.put('/users', UserController.update);
 
 export default routes;
