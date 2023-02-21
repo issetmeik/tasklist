@@ -69,7 +69,7 @@ Para cada variável de ambiente você precisa substituir por seus **próprios da
 
 5. Após substituir os valores das variaveis de ambiente, abra o terminal na raiz do projeto e digite "npx sequelize-cli db:migrate" para criar todas as tabelas no banco de dados.
 6. Com a configuração concluída, você só precisa testar a execução do **npm run dev**
-7. Se tudo estiver OK, você deve testar o status do servidor através do endpoint: **seu_dominio:sua_porta/api/health** que retorna um JSON com informações básicas como: `{ "uptime": 1.432175383, "message": "OK", "version": "1.0.0","timestamp": 1677000014598 }`.
+7. Se tudo estiver OK, você deve testar o status do servidor através do endpoint: **seu_dominio:sua_porta/health** que retorna um JSON com informações básicas como: `{ "uptime": 1.432175383, "message": "OK", "version": "1.0.0","timestamp": 1677000014598 }`.
 8. Divirta-se! :D
 
 ## Start
