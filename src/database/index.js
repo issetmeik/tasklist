@@ -6,6 +6,9 @@ import Task from '../app/models/task';
 import Request from '../app/models/request';
 
 const models = [User, Task, Request];
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 class Database {
   constructor() {

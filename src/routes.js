@@ -5,12 +5,14 @@ import requestLogger from './app/middlewares/requestLogger';
 import UserController from './app/controllers/UserController';
 import TaskController from './app/controllers/TaskController';
 import SessionController from './app/controllers/SessionController';
+import HealthController from './app/controllers/HealthController';
 
 const routes = new Router();
 routes.use(requestLogger);
 
 routes.post('/sessions', SessionController.store);
 routes.post('/users', UserController.store);
+routes.get('/health', HealthController.health);
 
 //Need auth
 routes.use(authMiddleware);

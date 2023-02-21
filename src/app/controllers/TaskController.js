@@ -18,7 +18,11 @@ class TaskController {
       task,
     });
 
-    return res.json(tasks);
+    return res.json({
+      id: tasks.id,
+      task: tasks.task,
+      check: tasks.check,
+    });
   }
 
   async index(req, res) {
@@ -26,7 +30,15 @@ class TaskController {
       where: { check: false, user_id: req.userId },
     });
 
-    return res.json(tasks);
+    return res.json(
+      tasks.map((task) => {
+        return {
+          id: task.id,
+          task: task.task,
+          check: task.check,
+        };
+      })
+    );
   }
 
   async update(req, res) {
@@ -52,7 +64,11 @@ class TaskController {
 
     await task.update(req.body);
 
-    return res.json(task);
+    return res.json({
+      id: task.id,
+      task: task.task,
+      check: task.check,
+    });
   }
 
   async delete(req, res) {

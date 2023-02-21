@@ -7,7 +7,6 @@ class Request extends Model {
         method: Sequelize.STRING,
         url: Sequelize.STRING,
         body: Sequelize.JSON,
-        status: Sequelize.STRING,
       },
       {
         sequelize,
