@@ -19,10 +19,6 @@ module.exports = {
         type: Sequelize.JSON,
         allowNull: true,
       },
-      status: {
-        type: Sequelize.INTEGER,
-        allowNull: false,
-      },
       created_at: {
         type: Sequelize.DATE,
         allowNull: false,

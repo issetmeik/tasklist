@@ -6,7 +6,6 @@ export default async (req, res, next) => {
     method: req.method,
     url: req.originalUrl,
     body: req.body,
-    status: res.statusCode,
   });
 
   return next();
