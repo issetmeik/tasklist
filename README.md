@@ -4,8 +4,9 @@ Este projeto é uma prova de conceito (POC), criada com o objetivo de colocar em
 
 ## Indice
 
-- [Desafiotech-junior](#Desafiotech-junior)
+- [POC-tasklist](#POC-tasklist)
 - [Índice](#indice)
+- [Sobre](#sobre)
 - [Características](#características)
 - [Setup](#setup)
   - [Pré-requisitos](#pré-requisitos)
