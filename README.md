@@ -29,7 +29,7 @@ A tasklist é uma aplicação desenvolvida para auxiliar no gerenciamento de tar
 - Alteração de informações de usuário.
 - Autenticação.
 - Criptografia de senha.
-- Enviroment.
+- Environment.
 - Migrations, para facilitar criação de tabelas no banco de dados.
 - RequestLogger.
 
