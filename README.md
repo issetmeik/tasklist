@@ -78,16 +78,16 @@ Feito as instruções, agora é a hora de usar o nosso sistema:
 1. Health check:
 
    ```
-   curl --request GET \
+   curl --request GET
    --url http://{{base_url}}/health
    ```
 
 2. Create User:
 
    ```
-   curl --request POST \
-   --url http://{{base_url}}/users \
-   --header 'Content-Type: application/json' \
+   curl --request POST
+   --url http://{{base_url}}/users
+   --header 'Content-Type: application/json'
    --data '{
    	"name": "Lucio",
    	"email": "luciosilva@hotmail.com",
@@ -98,10 +98,10 @@ Feito as instruções, agora é a hora de usar o nosso sistema:
 3. Update User:
 
 ```
-curl --request PUT \
---url http://{{base_url}}/users \
---header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiaWF0IjoxNjc2OTEyMjQxLCJleHAiOjE2NzY5OTg2NDF9.qbX0tUL7VH8AcpGxv9xSF6c2Zsbkhhop7hYxTzcxWgM' \
---header 'Content-Type: application/json' \
+curl --request PUT
+--url http://{{base_url}}/users
+--header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiaWF0IjoxNjc2OTEyMjQxLCJleHAiOjE2NzY5OTg2NDF9.qbX0tUL7VH8AcpGxv9xSF6c2Zsbkhhop7hYxTzcxWgM'
+--header 'Content-Type: application/json'
 --data '{
   "name": "Lucio Santos",
   "oldPassword": "pa$$word",
@@ -113,9 +113,9 @@ curl --request PUT \
 4. Session:
 
 ```
-curl --request POST \
---url http://{{base_url}}/sessions \
---header 'Content-Type: application/json' \
+curl --request POST
+--url http://{{base_url}}/sessions
+--header 'Content-Type: application/json'
 --data '{
 	"email": "luciosilva@gmail.com",
 	"password": "pa$$word"
@@ -125,10 +125,10 @@ curl --request POST \
 5. Create Task:
 
 ```
-curl --request POST \
-  --url http://{{base_url}}/tasks \
-  --header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OCwiaWF0IjoxNjc2OTk4NDQ5LCJleHAiOjE2NzcwODQ4NDl9.6tg2X5rspkjiPdQhFEd0H6NKt4KwBNANYQUv2ONkDW0' \
-  --header 'Content-Type: application/json' \
+curl --request POST
+  --url http://{{base_url}}/tasks
+  --header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OCwiaWF0IjoxNjc2OTk4NDQ5LCJleHAiOjE2NzcwODQ4NDl9.6tg2X5rspkjiPdQhFEd0H6NKt4KwBNANYQUv2ONkDW0'
+  --header 'Content-Type: application/json'
   --data '{
 	"task": "Estudar matemática."
 }'
@@ -138,10 +138,10 @@ curl --request POST \
 6. Update Task:
 
 ```
-curl --request PUT \
-  --url http://{{base_url}}/tasks/3 \
-  --header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwiaWF0IjoxNjc2OTE1MjY2LCJleHAiOjE2NzcwMDE2NjZ9.Op27y2CbvC9niibETu2uv_5JgKm3t8Eb23D1mzXlijw' \
-  --header 'Content-Type: application/json' \
+curl --request PUT
+  --url http://{{base_url}}/tasks/:id
+  --header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwiaWF0IjoxNjc2OTE1MjY2LCJleHAiOjE2NzcwMDE2NjZ9.Op27y2CbvC9niibETu2uv_5JgKm3t8Eb23D1mzXlijw'
+  --header 'Content-Type: application/json'
   --data '{
 	"check": true
 }'
@@ -150,16 +150,16 @@ curl --request PUT \
 7. List all:
 
 ```
-curl --request GET \
-  --url http://{{base_url}}/tasks \
+curl --request GET
+  --url http://{{base_url}}/tasks
   --header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OCwiaWF0IjoxNjc2OTk4NDQ5LCJleHAiOjE2NzcwODQ4NDl9.6tg2X5rspkjiPdQhFEd0H6NKt4KwBNANYQUv2ONkDW0'
 ```
 
 8. Delete Task:
 
 ```
-curl --request DELETE \
-  --url http://{{base_url}}/tasks/4 \
+curl --request DELETE
+  --url http://{{base_url}}/tasks/:id
   --header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwiaWF0IjoxNjc2OTE1MjY2LCJleHAiOjE2NzcwMDE2NjZ9.Op27y2CbvC9niibETu2uv_5JgKm3t8Eb23D1mzXlijw'
 ```
 
